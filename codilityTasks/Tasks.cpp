@@ -1,7 +1,6 @@
 #include "Tasks.h"
 
 
-
 int Tasks::binaryGap(int N) {
 	int mask = 0b1;
 	int maxBinaryGap = 0;
@@ -71,4 +70,27 @@ vector<int> Tasks::cyclicRotation(vector<int>& A, int K)
 	}
 
 	return A;
+}
+
+
+#include<unordered_map>
+int Tasks::oddOccurances(vector<int>& A)
+{
+	unordered_map<int, int> occurances;
+
+	for (int i : A) {
+		if (occurances.find(i) == occurances.end()) {
+			occurances[i] = 1;
+		}else {
+			occurances[i]++;
+		}
+	}
+
+	for (pair<int, int> Pair : occurances) {
+		if (Pair.second % 2 == 1) {
+			return Pair.first;
+		}
+	}
+
+	return 0;
 }
