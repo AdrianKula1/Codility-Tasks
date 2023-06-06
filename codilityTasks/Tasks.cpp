@@ -126,4 +126,28 @@ int Tasks::permMissingElem(vector<int>& A)
 
 	return nextNumber;
 }
+#include<cmath>
+int Tasks::tapeEquilibrium(vector<int>& A)
+{
+	unsigned long int left = 0, right = 0;
+
+	left = A[0];
+
+	for (int number : A) {
+		right += number;
+	}
+	right -= A[0];
+
+	int lowestDifference = INT_MAX;
+	for (int i = 1; i < A.size(); i++) {
+		int result = left - right;
+		if (abs(result) < lowestDifference) {
+			lowestDifference = abs(result);
+		}
+		left += A[i];
+		right -= A[i];
+	}
+
+	return lowestDifference;
+}
 

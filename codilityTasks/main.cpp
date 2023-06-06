@@ -21,8 +21,11 @@ int main() {
 
 	//cout << T.frogJmp(10, 85, 30) << std::endl;
 
-	vector<int> z5{2};
-	cout << T.permMissingElem(z5) << std::endl;
+	//vector<int> z5{2, 2};
+	//cout << T.permMissingElem(z5) << std::endl;
+
+	vector<int> z6{3, 1, 2, 4, 3};
+	cout << T.tapeEquilibrium(z6) << std::endl;
 
 	return 0;
 }

@@ -11,6 +11,7 @@ public:
 	int oddOccurancesInArray(vector<int>& A);
 	int frogJmp(int X, int Y, int D);
 	int permMissingElem(vector<int>& A);
+	int tapeEquilibrium(vector<int>& A);
 	
 };
 
