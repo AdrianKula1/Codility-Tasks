@@ -19,6 +19,10 @@ int main() {
 	/*vector<int> z3{1};
 	cout << T.oddOccurances(z3) << std::endl;*/
 
-	cout << T.frogJmp(10, 85, 30) << std::endl;
+	//cout << T.frogJmp(10, 85, 30) << std::endl;
+
+	vector<int> z5{2};
+	cout << T.permMissingElem(z5) << std::endl;
+
 	return 0;
 }

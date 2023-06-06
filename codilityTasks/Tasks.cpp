@@ -103,3 +103,27 @@ int Tasks::frogJmp(int X, int Y, int D)
 
 	return result;
 }
+#include<set>
+int Tasks::permMissingElem(vector<int>& A)
+{
+	if (A.size() == 0) {
+		return 1;
+	}
+	set<int> Set;
+	for (int number : A) {
+		Set.insert(number);
+	}
+
+	
+	int nextNumber = 1;
+	for (int number : Set) {
+		if (number == nextNumber) {
+			nextNumber++;
+		}else {
+			return nextNumber;
+		}
+	}
+
+	return nextNumber;
+}
+
