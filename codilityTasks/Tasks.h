@@ -7,6 +7,6 @@ class Tasks
 {
 public:
 	int binaryGap(int N);
-	vector<int> solution(vector<int>& A, int K);
+	vector<int> cyclicRotation(vector<int>& A, int K);
 };
 

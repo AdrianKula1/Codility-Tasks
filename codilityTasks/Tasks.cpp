@@ -51,13 +51,14 @@ vector<int> Tasks::cyclicRotation(vector<int>& A, int K)
 	}
 
 	
-
+	//How many times do we have to perform the rotation
 	while (K--) {
 		int lastNumber = A.back();
 
 		int previousNumber = A[0];
 		int nextNumber = A[1];
 		
+		//Swap numbers 
 		for (int i = 1; i < A.size(); i++) {
 			nextNumber = A[i];
 			A[i] = previousNumber;
@@ -65,6 +66,7 @@ vector<int> Tasks::cyclicRotation(vector<int>& A, int K)
 			previousNumber = nextNumber;
 			
 		}
+		//Last number becomes first
 		A[0] = lastNumber;
 	}
 
