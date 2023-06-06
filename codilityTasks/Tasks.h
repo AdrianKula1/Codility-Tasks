@@ -13,6 +13,7 @@ public:
 	int permMissingElem(vector<int>& A);
 	int tapeEquilibrium(vector<int>& A);
 	int frogRiverOne(int X, vector<int>& A);
-	
+	int permCheck(vector<int>& A);
+
 };
 

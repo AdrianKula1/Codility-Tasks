@@ -168,4 +168,24 @@ int Tasks::frogRiverOne(int X, vector<int>& A)
 
 	return -1;
 }
+#include<set>
+int Tasks::permCheck(vector<int>& A)
+{
+	multiset<int> numbers;
+
+	for (int number : A) {
+		numbers.insert(number);
+	}
+
+	int nextNumber = 1;
+
+	for (int key : numbers) {
+		if (key != nextNumber) {
+			return 0;
+		}
+		nextNumber++;
+	}
+
+	return 1;
+}
 
