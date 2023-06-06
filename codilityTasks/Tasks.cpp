@@ -1,6 +1,7 @@
 #include "Tasks.h"
 
 
+
 int Tasks::binaryGap(int N) {
 	int mask = 0b1;
 	int maxBinaryGap = 0;
@@ -35,4 +36,37 @@ int Tasks::binaryGap(int N) {
 	}
 
 	return maxBinaryGap;
+}
+
+vector<int> Tasks::cyclicRotation(vector<int>& A, int K)
+{	
+	if (A.size() <= 1) {
+		return A;
+	}
+
+	K %= A.size();
+
+	if (K == 0) {
+		return A;
+	}
+
+	
+
+	while (K--) {
+		int lastNumber = A.back();
+
+		int previousNumber = A[0];
+		int nextNumber = A[1];
+		
+		for (int i = 1; i < A.size(); i++) {
+			nextNumber = A[i];
+			A[i] = previousNumber;
+
+			previousNumber = nextNumber;
+			
+		}
+		A[0] = lastNumber;
+	}
+
+	return A;
 }
