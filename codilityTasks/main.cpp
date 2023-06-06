@@ -24,8 +24,11 @@ int main() {
 	//vector<int> z5{2, 2};
 	//cout << T.permMissingElem(z5) << std::endl;
 
-	vector<int> z6{3, 1, 2, 4, 3};
-	cout << T.tapeEquilibrium(z6) << std::endl;
+	//vector<int> z6{3, 1, 2, 4, 3};
+	//cout << T.tapeEquilibrium(z6) << std::endl;
+	
+	vector<int> z7{1, 3, 1, 4, 2, 3, 5, 4};
+	cout << T.frogRiverOne(5, z7) << std::endl;
 
 	return 0;
 }

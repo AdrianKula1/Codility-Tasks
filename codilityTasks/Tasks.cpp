@@ -150,4 +150,22 @@ int Tasks::tapeEquilibrium(vector<int>& A)
 
 	return lowestDifference;
 }
+#include<unordered_set>
+int Tasks::frogRiverOne(int X, vector<int>& A)
+{
+	if (A.size() < X) {
+		return -1;
+	}
+
+	unordered_set<int> path;
+	for (unsigned int i = 0; i < A.size(); i++) {
+		path.insert(A[i]);
+
+		if (path.size() == X) {
+			return i;
+		}
+	}
+
+	return -1;
+}
 
