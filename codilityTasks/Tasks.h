@@ -8,6 +8,7 @@ class Tasks
 public:
 	int binaryGap(int N);
 	vector<int> cyclicRotation(vector<int>& A, int K);
-	int oddOccurances(vector<int>& A);
+	int oddOccurancesInArray(vector<int>& A);
+	int frogJmp(int X, int Y, int D);
 };
 

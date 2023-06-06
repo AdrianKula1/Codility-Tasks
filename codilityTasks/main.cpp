@@ -10,15 +10,15 @@ int main() {
 
 
 	//Task2
-	//vector<int> z2{};
-	//vector<int> zad2 = T.cyclicRotation(z2, 10);
+	//vector<int> z2{1, 1, 1};
+	//vector<int> zad2 = T.cyclicRotation(z2, 0);
 	//for (int i : zad2) {
 	//	cout << i << endl;
 	//}
 
-	vector<int> z3{1};
-	cout << T.oddOccurances(z3) << std::endl;
+	/*vector<int> z3{1};
+	cout << T.oddOccurances(z3) << std::endl;*/
 
-
+	cout << T.frogJmp(10, 85, 30) << std::endl;
 	return 0;
 }

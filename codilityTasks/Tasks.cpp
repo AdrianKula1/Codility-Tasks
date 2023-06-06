@@ -1,7 +1,7 @@
 #include "Tasks.h"
 
-
 int Tasks::binaryGap(int N) {
+	
 	int mask = 0b1;
 	int maxBinaryGap = 0;
 	int currentBinaryGap = 0;
@@ -36,15 +36,16 @@ int Tasks::binaryGap(int N) {
 
 	return maxBinaryGap;
 }
-
+#include <algorithm>
 vector<int> Tasks::cyclicRotation(vector<int>& A, int K)
-{	
+{
+
 	if (A.size() <= 1) {
 		return A;
 	}
 
 	K %= A.size();
-
+	
 	if (K == 0) {
 		return A;
 	}
@@ -74,7 +75,7 @@ vector<int> Tasks::cyclicRotation(vector<int>& A, int K)
 
 
 #include<unordered_map>
-int Tasks::oddOccurances(vector<int>& A)
+int Tasks::oddOccurancesInArray(vector<int>& A)
 {
 	unordered_map<int, int> occurances;
 
@@ -93,4 +94,12 @@ int Tasks::oddOccurances(vector<int>& A)
 	}
 
 	return 0;
+}
+#include<cmath>
+int Tasks::frogJmp(int X, int Y, int D)
+{
+	int totalDistance = Y - X;
+	double result = ceil((double)totalDistance / (double)D);
+
+	return result;
 }
