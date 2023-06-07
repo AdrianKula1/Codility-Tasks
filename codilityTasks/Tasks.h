@@ -14,6 +14,7 @@ public:
 	int tapeEquilibrium(vector<int>& A);
 	int frogRiverOne(int X, vector<int>& A);
 	int permCheck(vector<int>& A);
+	vector<int> maxCounters(int N, vector<int>& A);
 
 };
 

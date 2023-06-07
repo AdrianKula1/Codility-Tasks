@@ -188,4 +188,35 @@ int Tasks::permCheck(vector<int>& A)
 
 	return 1;
 }
+#include <algorithm>
+vector<int> Tasks::maxCounters(int N, vector<int>& A)
+{
+	vector<int> result(N, 0);
+	int maxElement = 0;
+	int currentMaxElement = 0;
+	for (int i = 0; i < A.size(); i++) {
+		if (A[i] > N) {
+			//maxElement = *max_element(result.begin(), result.end());
+			if (maxElement < currentMaxElement) {
+				maxElement = currentMaxElement;
+			}
+		}else {
+			result[A[i] - 1] = max(maxElement + 1, result[A[i] - 1] + 1);
+			if (currentMaxElement < result[A[i] - 1]) {
+				currentMaxElement = result[A[i] - 1];
+			}
+		}
+			
+	}
+
+	for (int i = 0; i < result.size(); i++) {
+		if (result[i] < maxElement) {
+			result[i] = maxElement;
+		}
+	}
+
+	return result;
+}
+
+
 
