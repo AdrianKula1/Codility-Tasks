@@ -217,6 +217,25 @@ vector<int> Tasks::maxCounters(int N, vector<int>& A)
 
 	return result;
 }
+#include<set>
+int Tasks::MissingInteger(vector<int>& A)
+{
+	set<int> numbers;
+	for (int number : A) {
+		numbers.insert(number);
+	}
+
+	int actualNumber = 1;
+
+	for (int key : numbers) {
+		if (actualNumber != key && key>0) {
+			return actualNumber;
+		}
+		actualNumber++;
+	}
+
+	return actualNumber;
+}
 
 
 

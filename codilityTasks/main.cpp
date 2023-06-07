@@ -38,7 +38,9 @@ int main() {
 	vector<int> A = {3, 4, 4, 6, 1, 4, 4};
 
 	vector<int>result = T.maxCounters(5, A);
-	//std::cout << T.maxCounters(5, A) << std::endl;
+	//for (int i : zad2) {
+	//	cout << i << endl;
+	//}
 
 	return 0;
 }
