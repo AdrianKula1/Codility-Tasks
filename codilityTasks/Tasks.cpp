@@ -265,5 +265,15 @@ int Tasks::passingCars(vector<int>& A)
 	return result;
 }
 
+#include<cmath>
+int Tasks::countDiv(int A, int B, int K)
+{
+	int bDivisors = B / K;
+	int aDivisors = A / K;
+	int aIsDivisor = (A % K == 0 ? 1 : 0);
+	int result = bDivisors - aDivisors + aIsDivisor;
+	return result;
+}
+
 
 

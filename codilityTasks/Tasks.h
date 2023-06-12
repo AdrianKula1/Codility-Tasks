@@ -17,5 +17,6 @@ public:
 	vector<int> maxCounters(int N, vector<int>& A);
 	int missingInteger(vector<int>& A);
 	int passingCars(vector<int>& A);
+	int countDiv(int A, int B, int K);
 };
 

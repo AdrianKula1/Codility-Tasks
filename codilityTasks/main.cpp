@@ -45,8 +45,11 @@ int main() {
 	//vector<int> A = { 3, 4, 4, 6, 1, 4, 4 };
 	//T.missingInteger(A);
 	
-	vector<int> A = { 0, 1 };
-	cout << T.passingCars(A) << endl;
+	//vector<int> A = { 0, 1 };
+	//cout << T.passingCars(A) << endl;
+	
+	
+	cout << T.countDiv(6, 11, 2) << endl;
 
 
 	return 0;
