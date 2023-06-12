@@ -35,12 +35,19 @@ int main() {
 	//cout << T.permCheck(z7) << std::endl;
 
 
-	vector<int> A = {3, 4, 4, 6, 1, 4, 4};
+	//vector<int> A = {3, 4, 4, 6, 1, 4, 4};
 
-	vector<int>result = T.maxCounters(5, A);
+	//vector<int>result = T.maxCounters(5, A);
 	//for (int i : zad2) {
 	//	cout << i << endl;
 	//}
+
+	//vector<int> A = { 3, 4, 4, 6, 1, 4, 4 };
+	//T.missingInteger(A);
+	
+	vector<int> A = { 0, 1 };
+	cout << T.passingCars(A) << endl;
+
 
 	return 0;
 }

@@ -15,7 +15,7 @@ public:
 	int frogRiverOne(int X, vector<int>& A);
 	int permCheck(vector<int>& A);
 	vector<int> maxCounters(int N, vector<int>& A);
-	int MissingInteger(vector<int>& A)
-
+	int missingInteger(vector<int>& A);
+	int passingCars(vector<int>& A);
 };
 

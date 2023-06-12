@@ -218,7 +218,7 @@ vector<int> Tasks::maxCounters(int N, vector<int>& A)
 	return result;
 }
 #include<set>
-int Tasks::MissingInteger(vector<int>& A)
+int Tasks::missingInteger(vector<int>& A)
 {
 	set<int> numbers;
 	for (int number : A) {
@@ -235,6 +235,34 @@ int Tasks::MissingInteger(vector<int>& A)
 	}
 
 	return actualNumber;
+}
+
+#include<vector>
+int Tasks::passingCars(vector<int>& A)
+{
+
+	vector<int> passings;
+	int westCounter = 0;
+
+ 	for(unsigned int i=0; i<A.size(); i++){
+		if (A[i] == 0) {
+			passings.push_back(0 - westCounter);
+		}
+		else {
+			westCounter++;
+		}
+	}
+
+	int result = 0;
+
+	for (int number : passings) {
+		result += (number + westCounter);
+		if (result > 1000000000) {
+			return -1;
+		}
+	}
+	
+	return result;
 }
 
 
