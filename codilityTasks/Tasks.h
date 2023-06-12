@@ -18,5 +18,6 @@ public:
 	int missingInteger(vector<int>& A);
 	int passingCars(vector<int>& A);
 	int countDiv(int A, int B, int K);
+	int distinct(vector<int>& A);
 };
 

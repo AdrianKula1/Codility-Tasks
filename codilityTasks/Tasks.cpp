@@ -275,5 +275,16 @@ int Tasks::countDiv(int A, int B, int K)
 	return result;
 }
 
+#include <set>
+int Tasks::distinct(vector<int>& A)
+{
+	unordered_set<int> uniqueNumbers;
+	for (int number : A) {
+		uniqueNumbers.insert(number);
+	}
+
+	return uniqueNumbers.size();
+}
+
 
 
