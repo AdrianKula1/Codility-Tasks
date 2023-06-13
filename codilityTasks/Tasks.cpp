@@ -287,4 +287,18 @@ int Tasks::distinct(vector<int>& A)
 }
 
 
+#include <algorithm>
+int Tasks::maxProductOfThree(vector<int>& A)
+{
+	sort(A.begin(), A.end());
+
+	int first = A[0] * A[1] * A[2];
+	int second = A[0] * A[1] * A[A.size()-1];
+	int third = A[A.size() - 1] * A[A.size() - 2] * A[A.size() - 3];
+	int fourth = A[A.size() - 1] * A[A.size() - 2] * A[0];
+
+	return max({ first, second, third, fourth });
+}
+
+
 
