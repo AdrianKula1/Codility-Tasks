@@ -20,5 +20,6 @@ public:
 	int countDiv(int A, int B, int K);
 	int distinct(vector<int>& A);
 	int maxProductOfThree(vector<int>& A);
+	int triangle(vector<int>& A);
 };
 

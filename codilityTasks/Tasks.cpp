@@ -289,7 +289,7 @@ int Tasks::distinct(vector<int>& A)
 
 #include <algorithm>
 int Tasks::maxProductOfThree(vector<int>& A)
-{
+{	
 	sort(A.begin(), A.end());
 
 	int firstThree = A[0] * A[1] * A[2];
@@ -300,5 +300,17 @@ int Tasks::maxProductOfThree(vector<int>& A)
 	return max({ firstThree, firstTwoOneLast, lastThree, lastTwoOneFirst });
 }
 
+#include <algorithm>
+int Tasks::triangle(vector<int>& A)
+{
+	if (A.size() < 3) return 0;
 
+	sort(A.begin(), A.end());
+
+	for (int i = 0; i < A.size() - 2; i++) 
+		if(A[i] >= 0 && A[i] > A[i + 2] - A[i + 1]) return 1;
+	
+	return 0;
+
+}
 
