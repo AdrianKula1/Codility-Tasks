@@ -21,5 +21,6 @@ public:
 	int distinct(vector<int>& A);
 	int maxProductOfThree(vector<int>& A);
 	int triangle(vector<int>& A);
+	//int numberOfDiscIntersections(vector<int>& A);
 };
 

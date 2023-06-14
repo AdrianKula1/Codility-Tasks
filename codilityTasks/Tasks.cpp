@@ -313,4 +313,24 @@ int Tasks::triangle(vector<int>& A)
 	return 0;
 
 }
+//THIS TASK SCORED 81% AND SO FAR I DON'T KNOW HOW TO MAKE IT FASTER
+//int Tasks::numberOfDiscIntersections(vector<int>& A)
+//{
+//	int n = A.size();
+//	int sum = 0;
+//	int interect = 0;
+//	long total = n * (n - 1) / 2;
+//	for (int i = 0; i < n; i++) {
+//		for (int right = i + 1; right < n; right++) {
+//			if (right - A[i] - i > A[right]) { 
+//				sum++;
+//			}
+//		}
+//	}
+//
+//	if ((total - sum) > 10000000) {
+//		return -1;
+//	}
+//	return (total - sum);
+//}
 
