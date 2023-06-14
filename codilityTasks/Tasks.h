@@ -1,5 +1,6 @@
 #pragma once
 #include <vector>
+#include <string>
 
 using namespace std;
 
@@ -22,5 +23,6 @@ public:
 	int maxProductOfThree(vector<int>& A);
 	int triangle(vector<int>& A);
 	//int numberOfDiscIntersections(vector<int>& A);
+	int brackets(string& S);
 };
 

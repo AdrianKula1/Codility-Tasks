@@ -313,6 +313,7 @@ int Tasks::triangle(vector<int>& A)
 	return 0;
 
 }
+
 //THIS TASK SCORED 81% AND SO FAR I DON'T KNOW HOW TO MAKE IT FASTER
 //int Tasks::numberOfDiscIntersections(vector<int>& A)
 //{
@@ -333,4 +334,29 @@ int Tasks::triangle(vector<int>& A)
 //	}
 //	return (total - sum);
 //}
+#include<stack>
+int Tasks::brackets(string& S)
+{
 
+	stack<char> brackets;
+	for (char c : S) {
+		if (c == '(' || c == '{' || c == '[') {
+			brackets.push(c);
+			continue;
+		}else if (brackets.top() == '(' && c==')') {
+			brackets.pop();
+		}else if (brackets.top() == '{' && c == '}') {
+			brackets.pop();
+		}else if (brackets.top() == '[' && c == ']') {
+			brackets.pop();
+		}else {
+			return 0;
+		}
+	}
+
+	if (brackets.empty()) {
+		return 1;
+	}
+
+	return 0;
+}
