@@ -360,3 +360,27 @@ int Tasks::brackets(string& S)
 
 	return 0;
 }
+
+#include <stack>
+int Tasks::fish(vector<int>& A, vector<int>& B)
+{
+	stack<int> downstream;
+	int eatenFishes = 0;
+	for (int i = 0; i < A.size(); i++) {
+
+		if (B[i] == 1) {
+			downstream.push(A[i]);
+		}else {
+			while (!downstream.empty()) {
+				if (downstream.top() > A[i]) {
+					eatenFishes++;
+					break;
+				}else {
+					eatenFishes++;
+					downstream.pop();
+				}
+			}
+		}
+	}
+	return A.size() - eatenFishes;
+}

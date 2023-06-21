@@ -24,5 +24,6 @@ public:
 	int triangle(vector<int>& A);
 	//int numberOfDiscIntersections(vector<int>& A);
 	int brackets(string& S);
+	int fish(vector<int>& A, vector<int>& B);
 };
 
