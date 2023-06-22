@@ -384,3 +384,31 @@ int Tasks::fish(vector<int>& A, vector<int>& B)
 	}
 	return A.size() - eatenFishes;
 }
+#include<stack>
+int Tasks::nesting(string& S)
+{
+	if (S.size() % 2 == 1) {
+		return 0;
+	}
+	stack<int> brackets;
+	for (char c : S) {
+		if (c == '(') {
+			brackets.push(c);
+		}
+		else {
+			if (brackets.top() == '(') {
+				brackets.pop();
+			}else {
+				return 0;
+			}
+		}
+	}
+
+	if (brackets.empty())
+		return 1;
+
+
+	return 0;
+	
+	
+}

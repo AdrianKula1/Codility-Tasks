@@ -51,9 +51,10 @@ int main() {
 	
 	//cout << T.countDiv(6, 11, 2) << endl;
 	
-	vector<int> A = { 2147483646, 2147483645, 2147483647 };
-	cout << T.triangle(A) << endl;
-
+	//vector<int> A = { 2147483646, 2147483645, 2147483647 };
+	//cout << T.triangle(A) << endl;
 	
+	string S = "()(()()(((()())(()()))";
+	T.nesting(S);
 	return 0;
 }
