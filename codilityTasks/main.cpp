@@ -54,7 +54,18 @@ int main() {
 	//vector<int> A = { 2147483646, 2147483645, 2147483647 };
 	//cout << T.triangle(A) << endl;
 	
-	string S = "()(()()(((()())(()()))";
-	T.nesting(S);
+	//string S = "()(()()(((()())(()()))";
+	//T.nesting(S);
+
+	vector<int> A(8);
+	A[0] = 3;
+	A[1] = 4;
+	A[2] = 3;
+	A[3] = 2;
+	A[4] = 3;
+	A[5] = -1;
+	A[6] = 3;   
+	A[7] = 3;
+	T.dominator(A);
 	return 0;
 }

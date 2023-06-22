@@ -1,4 +1,5 @@
 #include "Tasks.h"
+#include <iostream>
 
 int Tasks::binaryGap(int N) {
 	
@@ -407,8 +408,26 @@ int Tasks::nesting(string& S)
 	if (brackets.empty())
 		return 1;
 
-
 	return 0;
-	
-	
+}
+#include<map>
+int Tasks::dominator(vector<int>& A)
+{
+	if (A.size() == 1) {
+		return 0;
+	}
+	unordered_map<int, int> numberCounter;
+
+	for (int i = 0; i < A.size(); i++) {
+		if (numberCounter.find(A[i]) == numberCounter.end()) {
+			numberCounter[A[i]] = 1;
+		}
+		else {
+			numberCounter[A[i]]++;
+			if (numberCounter[A[i]] > A.size() / 2) {
+				return i;
+			}
+		}
+	}
+	return -1;
 }

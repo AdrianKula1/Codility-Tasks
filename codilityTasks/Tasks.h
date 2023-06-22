@@ -26,5 +26,6 @@ public:
 	int brackets(string& S);
 	int fish(vector<int>& A, vector<int>& B);
 	int nesting(string& S);
+	int dominator(vector<int>& A);
 };
 
