@@ -431,3 +431,62 @@ int Tasks::dominator(vector<int>& A)
 	}
 	return -1;
 }
+
+int Tasks::equiLeader(vector<int>& A)
+{
+	if (A.size() == 1) {
+		return 1;
+	}
+	unordered_map<int, int> numberCounter;
+	int equiLeaderCoutner = 0;
+	int equiLeader = 0;
+	for (int i = 0; i < A.size(); i++) {
+		if (numberCounter.find(A[i]) == numberCounter.end()) {
+			numberCounter[A[i]] = 1;
+		}else {
+			numberCounter[A[i]]++;
+			if (numberCounter[A[i]] > A.size() / 2) {
+				equiLeaderCoutner = numberCounter[A[i]];
+				break;
+			}
+		}
+	}
+
+	if (equiLeaderCoutner == 0) {
+		return -1;
+	}
+	
+	int leftOccurances = 0;
+	int rightOccurances = equiLeaderCoutner;
+	int result = 0;
+	for (int i = 0; i < A.size(); i++) {
+		if (A[i] == equiLeader) {
+			leftOccurances++;
+			rightOccurances--;
+		}
+
+		if (leftOccurances > (i / 2)) {
+			result++;
+		}
+
+		if (rightOccurances > ((A.size() - i) / 2 )) {
+			result++;
+		}
+
+	}
+
+	return result;
+}
+
+int Tasks::maxSliceSum(vector<int>& A)
+{
+	int cumulativeSum = A[0], maxSliceSum = A[0];
+
+	for (int i = 1; i < A.size(); i++) {
+		cumulativeSum = max(cumulativeSum+A[i], A[i]);
+
+		maxSliceSum = max(cumulativeSum, maxSliceSum);
+	}
+
+	return maxSliceSum;
+}
