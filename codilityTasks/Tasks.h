@@ -29,5 +29,6 @@ public:
 	int dominator(vector<int>& A);
 	int equiLeader(vector<int>& A);
 	int maxSliceSum(vector<int>& A);
+	int countFactors(int N);
 };
 
